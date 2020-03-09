@@ -143,6 +143,8 @@ choosePercent.addEventListener('input', function(){
 });
 
 let appData = {
+
+    
         budget: money,
         timeData: time,
         expenses: {},
