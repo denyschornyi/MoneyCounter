@@ -24,8 +24,11 @@ let startBtn = document.getElementById('start'),
     monthValue = document.querySelector('.month-value'),
     dayValue = document.querySelector('.day-value');
 
-    let money, time;
 
+    expensesItemBtn.disabled = true;
+    optionalExpensesBtn.disabled = true;
+    countBudgetBtn.disabled = true;
+    let money, time;
 
 startBtn.addEventListener('click' , function(){
     time  = prompt("Enter your date in format YYYY-MM-DD", '');
@@ -41,7 +44,12 @@ startBtn.addEventListener('click' , function(){
     yearValue.value = new Date(Date.parse(time)).getFullYear();
     monthValue.value = new Date(Date.parse(time)).getMonth() + 1;
     dayValue.value = new Date(Date.parse(time)).getDate();
-} );
+
+    
+    expensesItemBtn.disabled = false;
+    optionalExpensesBtn.disabled = false;
+    countBudgetBtn.disabled = false;
+});
 
 
 expensesItemBtn.addEventListener('click', function(){
